@@ -9,6 +9,7 @@ import os
 import json
 from time import time
 import logging
+from cameras_config import cameras_config
 
 #Creates a kafka topic dynamically
 def Create_Cam_Topic(self, camera_name):
@@ -224,12 +225,7 @@ if __name__ == "__main__":
     print('start producer')
 
     # list of camera accesses
-    cameras = [
-        "rtsp://username:password@X.X.X.X:554/cam/realmonitor?channel=1&subtype=1", #&proto=Onvif",
-        #"rtsp://username:password@X.X.X.X:554/cam/realmonitor?channel=1&subtype=2"#,
-        #"rtsp://username:password@X.X.X.X:554/cam/realmonitor?channel=1&subtype=1"
-
-        ]
+    cameras = cameras_config
 
     
     wht = 320
