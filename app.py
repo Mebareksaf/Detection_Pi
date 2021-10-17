@@ -10,7 +10,7 @@ import json
 from time import time
 import logging
 
-#Creates a kafka topic dinamically
+#Creates a kafka topic dynamically
 def Create_Cam_Topic(self, camera_name):
     broker_topics = self.adminClient.list_topics().topics
 
